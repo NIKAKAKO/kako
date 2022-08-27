@@ -106,3 +106,29 @@ input {
     align-items: center;
     color: #2E2E2E;
 }
+
+select {
+    width: 358px;
+    height: 60px;
+    background: #EBEBEB;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.04em;
+    color: #000000;
+    border: none;
+    outline: none;
+}
+
+option {
+    font-weight: 400;
+    color: #000000;
+}
+
+option:focus {
+    background: #E7F0F8;
+    color: #000000;
+}

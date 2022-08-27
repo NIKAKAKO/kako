@@ -37,12 +37,34 @@
                 </li>
                 <li>
                     <select name="team" id="team">
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
+                        <option selected disabled value="">თიმი</option>
+                        <option value="">დეველოპმენტი</option>
+                        <option value="">HR</option>
+                        <option value="">გაყიდვები</option>
+                        <option value="">დიზაინი</option>
+                        <option value="">მარკეგინგი</option>
                     </select>
-                    
                 </li>
+                <li>
+                    <select name="team" id="team">
+                    <option class="disabled" selected disabled value="">თიმი</option>
+                    <option value="development">დეველოპმენტი</option>
+                    <option value="hr">HR</option>
+                    <option value="sales">გაყიდვები</option>
+                    <option value="design">დიზაინი</option>
+                    <option value="marketing">მარკეგინგი</option>
+                    </select>
+            </li>
+            <li>
+                <label for="firstname">მეილი</label>
+                <input type="email" name="email">
+                <span class="input-bottom-text">უნდა მთავრდებოდეს @redberry.ge-ით</span>
+            </li>
+            <li>
+                <label for="firstname">ტელეფონის ნომერი</label>
+                <input type="tel" name="mobile">
+                <span class="input-bottom-text">ქართული მობ-ნომრის ფორმატი</span>
+            </li>
             </ul>
         </form>
     </main>
