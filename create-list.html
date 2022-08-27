@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./asset/styles/share.css">
+    <link rel="icon" href="https://redberry.international/wp-content/uploads/2021/05/cropped-favicon-32x32.png" sizes="32x32" />
+
     <title>Create list</title>
 </head>
 <body>
@@ -27,12 +29,12 @@
             <ul>
                 <li>
                     <label for="firstname">სახელი</label>
-                    <input type="text" name="firstname">
+                    <input class="input-class" type="text" name="firstname" placeholder="გრიშა">
                     <span class="input-bottom-text">მინიმუმ 2 სიმბოლო, ქართული ასოები</span>
                 </li>
                 <li>
                     <label for="lastname">გვარი</label>
-                    <input type="text" name="lastname">
+                    <input class="input-class" type="text" name="lastname" placeholder="ბაგრატიონი">
                     <span class="input-bottom-text">მინიმუმ 2 სიმბოლო, ქართული ასოები</span>
                 </li>
                 <li>
@@ -57,12 +59,12 @@
             </li>
             <li>
                 <label for="firstname">მეილი</label>
-                <input type="email" name="email">
+                <input class="input-class" type="email" name="email" placeholder="grish666@redberry.ge">
                 <span class="input-bottom-text">უნდა მთავრდებოდეს @redberry.ge-ით</span>
             </li>
             <li>
                 <label for="firstname">ტელეფონის ნომერი</label>
-                <input type="tel" name="mobile">
+                <input class="input-class" type="tel" name="mobile" placeholder="+995 598 00 07 01">
                 <span class="input-bottom-text">ქართული მობ-ნომრის ფორმატი</span>
             </li>
             </ul>
@@ -78,21 +80,53 @@
                         <p class="text-for-img-upload">ლეპტოპის ფოტოს ატვირთვა</p>
                     </label>
                 
-                    <label for="firstname">ლეპტოპის სახელი</label>
-                    <input type="text" name="firstname">
-                    <span class="input-bottom-text">ლათინური ასოები, ციფრები, !@#$%^&*()_+=</span>
+                    <label  for="firstname">ლეპტოპის სახელი</label>
+                    <input class="input-class" type="text" name="firstname" placeholder="HP">
+                    <span class="input-bottom-text laptop-names">ლათინური ასოები, ციფრები, !@#$%^&*()_+=</span>
+
+                    <select name="team" id="team">
+                        <option class="disabled" selected disabled value="">ლეპტოპის ბრენდი</option>
+                        <option value="development">დეველოპმენტი</option>
+                        <option value="hr">HR</option>
+                        <option value="sales">გაყიდვები</option>
+                        <option value="design">დიზაინი</option>
+                        <option value="marketing">მარკეგინგი</option>
+                        </select>
                 </li>
                 <li>
                     <select name="team" id="team">
-                    <option class="disabled" selected disabled value="">ლეპტოპის ბრენდი</option>
-                    <option value="development">დეველოპმენტი</option>
-                    <option value="hr">HR</option>
-                    <option value="sales">გაყიდვები</option>
-                    <option value="design">დიზაინი</option>
-                    <option value="marketing">მარკეგინგი</option>
-                    </select>
-            </li>
-                <li></li>
+                        <option class="disabled" selected disabled value="">CPU</option>
+                        <option value="development">დეველოპმენტი</option>
+                        <option value="hr">HR</option>
+                        <option value="sales">გაყიდვები</option>
+                        <option value="design">დიზაინი</option>
+                        <option value="marketing">მარკეგინგი</option>
+                        </select>
+                    
+                        <label  for="firstname">CPU-ს ბირთვი</label>
+                        <input class="input-class" type="text" name="firstname" placeholder="14">
+                        <span class="input-bottom-text laptop-names">მხოლოდ ციფრები</span>
+
+                        <label  for="firstname">CPU-ს ნაკადი</label>
+                        <input class="input-class" type="text" name="firstname" placeholder="365">
+                        <span class="input-bottom-text laptop-names">მხოლოდ ციფრები</span>
+
+                        <label  for="firstname">ლეპტოპის RAM (GB)</label>
+                        <input class="input-class" type="text" name="firstname" placeholder="16">
+                        <span class="input-bottom-text laptop-names">მხოლოდ ციფრები</span>
+                        
+                        <label for="radio">მეხსიერების ტიპი</label>
+                        <div class="radio-button-container">
+                            <input type="radio" id="sdd" name="ssd" value="SSD">
+                            <label for="sdd">SSD</label>
+                            <input type="radio" id="hdd" name="hdd" value="HDD">
+                            <label for="hdd">HDD</label>
+                        </div>
+                </li>
+
+                <li>
+                    <input type="date">
+                </li>
                 
 
             </ul>
