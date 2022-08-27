@@ -1,0 +1,108 @@
+@font-face {
+    font-family: HelveticaNeue;
+    src: url(./asset/fonts/HelveticaNeue.ttc) format("ttc");
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+}
+
+body {
+    padding: 2rem 0;
+    background: #E5E5E5;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.header-text-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.arrow-img {
+    position: absolute;
+    left: 0;
+    width: 1.125rem;
+    height: 1.5rem;
+}
+
+.header-text {
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    text-align: center;
+    color: #232323;
+}
+
+.header-text-laptop {
+    display: none;
+}
+
+.bottom-text {
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.063rem;
+    text-align: center;
+    color: #898989;
+}
+
+main {
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 0.75rem 0.75rem 0 0;
+    padding: 2rem 1rem;
+}
+
+.form-container {
+    width: 100%;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+li {
+    text-decoration: none;
+    list-style: none;
+}
+
+input {
+    margin: 1rem 0;
+    padding: 1rem;
+    display: block;
+    width: 358px;
+    height: 60px;
+    border: 1.8px solid #8AC0E2;
+    border-radius: 0.5rem;
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.313rem;
+    display: flex;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.input-bottom-text {
+    font-weight: 300;
+    font-size: 0.875rem;
+    line-height: 1.313rem;
+    display: flex;
+    align-items: center;
+    color: #2E2E2E;
+}
