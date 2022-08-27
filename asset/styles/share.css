@@ -66,6 +66,8 @@ main {
 
 .form-container {
     width: 100%;
+    max-width: 400px;
+    margin: auto;
 }
 
 ul {
@@ -78,13 +80,14 @@ ul {
 li {
     text-decoration: none;
     list-style: none;
+    width: 100%;
 }
 
 input {
     margin: 1rem 0;
     padding: 1rem;
     display: block;
-    width: 358px;
+    width: 100%;
     height: 60px;
     border: 1.8px solid #8AC0E2;
     border-radius: 0.5rem;
@@ -108,7 +111,7 @@ input {
 }
 
 select {
-    width: 358px;
+    width: 360px;
     height: 60px;
     background: #EBEBEB;
     border-radius: 8px;
@@ -121,14 +124,35 @@ select {
     color: #000000;
     border: none;
     outline: none;
+    /* -webkit-appearance: none;
+    appearance: none;
+    position: relative; */
 }
+
+/* select::after {
+    content: "▼";
+    font-size: 1rem;
+    top: 6px;
+    right: 10px;
+    position: absolute;
+} */
+
 
 option {
     font-weight: 400;
     color: #000000;
+    width: 50%;
 }
 
 option:focus {
     background: #E7F0F8;
     color: #000000;
 }
+
+/* .next {
+    width: 132px;
+    height: 46px;
+    background: #62A1EB;
+    border-radius: 8px;
+    float: right;
+} */
