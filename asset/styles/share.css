@@ -224,3 +224,8 @@ option:focus {
     background-repeat: no-repeat;
     background-position: right -1rem;
 }
+
+.button-saved {
+    display: flex;
+    justify-content: space-between;
+}
