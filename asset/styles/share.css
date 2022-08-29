@@ -176,9 +176,6 @@ select {
     background-position-y: 50%;
 }
 
-
-
-
 option {
     font-weight: 400;
     color: #000000;
@@ -212,14 +209,15 @@ option:focus {
     width: 100%;
     max-width: 400px;
     margin: auto;
-    display: none;
-
+    display: flex;
+    justify-content: center;
 }
 
 .second-ul {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    width: 100%;
 }
 
 .second-ul li {
@@ -231,9 +229,9 @@ option:focus {
 
 .upload-img {
     display: flex;
-    /* background-image: url(../Images/upload-laptop-img.png);
+    background-image: url(../Images/upload-laptop-img.png);
     background-repeat: no-repeat;
-    background-position: top 60px center; */
+    background-position: top 60px center;
     width: 100%;
     height: 244px;
     background-color: #F7F7F7;
@@ -245,17 +243,16 @@ option:focus {
     align-items: center;
 }
 
-.upload-img::before {
-    background-image: url(../Images/upload-laptop-img.png);
-    background-repeat: no-repeat;
-    background-position: top 60px center;
-}
-
 .upload-img.error {
         border-color: #E52F2F;
         background-color: #FFEDED;
         background-image: url(../Images/upload-laptop-img.png), url(../Images/error-warning.png);
         background-position: top 60px center, bottom 25px center;
+}
+
+.upload-class {
+    display: none;
+
 }
 
 .hidden-input {
@@ -451,19 +448,85 @@ option:focus {
         border-radius: 12px;
     }
 
+    .upload-img {
+        background-image: none;
+        max-width: 870px;
+        height: 423px;
+        gap: 4rem;
+    }
+
+    .upload-class {
+        display: block;
+        text-align: center;
+        width: 132px;
+        height: 46px;
+        background: #62A1EB;
+        border-radius: 8px;
+        margin-left: auto;
+        border: none;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        margin: 0;
+        color: #FFFFFF;
+        transition: 0.3 ease-in;
+        
+    }
+
     .text-for-img-upload {
        display: none;
     }
     
     .upload-img-hidden {
         display: block;
-        width: 50%;
+        width: 27%;
         text-align: center;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 38px;
+        color: #4386A9;
     }
-    .upload-img::after {
-        content: "";
+   
+    .laptop-name-brand {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .select-div {
+        width: 45%;
+        margin-bottom: 2rem;
+        height: 62px;
+    }
+
+    select {
+        height: 100%;
+    }
+
+    .input-halp {
+        margin: 1rem 0;
+        width: 45%;
+    }
     
+    .cpu-core-theard {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
     }
+    
+    .cpu {
+        height: 68px;
+        margin-bottom: 1.9rem;
+        flex-basis: 35%;
+    }
+
+    .cpu-core, .cpu-theard {
+        margin: 1rem 0;
+        flex-basis: 35%;
+
+    }
+
     
 
 }
