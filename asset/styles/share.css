@@ -231,9 +231,9 @@ option:focus {
 
 .upload-img {
     display: flex;
-    background-image: url(../Images/upload-laptop-img.png);
+    /* background-image: url(../Images/upload-laptop-img.png);
     background-repeat: no-repeat;
-    background-position: top 60px center;
+    background-position: top 60px center; */
     width: 100%;
     height: 244px;
     background-color: #F7F7F7;
@@ -243,6 +243,12 @@ option:focus {
     gap: 7rem;
     margin-bottom: 2rem;
     align-items: center;
+}
+
+.upload-img::before {
+    background-image: url(../Images/upload-laptop-img.png);
+    background-repeat: no-repeat;
+    background-position: top 60px center;
 }
 
 .upload-img.error {
@@ -345,8 +351,9 @@ option:focus {
         width: 100%;
         max-width: 1206px;
         margin: auto;
-        display: none;
+        display: flex;
         flex-direction: column;
+        /* padding: 2rem 10.688rem; */
     }
 
     .header-container {
@@ -428,11 +435,15 @@ option:focus {
 
 
     .second-ul {
+        width: 100%;
+        max-width: 1206px;
+        margin: auto;
         display: flex;
         flex-direction: column;
         gap: 1rem;
-        padding: 2rem 10rem;
+        /* padding: 2rem 22rem; */
     }
+    
 
     .second-ul li {
         padding: 2rem 10.875rem;
@@ -449,5 +460,10 @@ option:focus {
         width: 50%;
         text-align: center;
     }
+    .upload-img::after {
+        content: "";
+    
+    }
+    
 
 }
