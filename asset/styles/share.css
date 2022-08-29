@@ -58,16 +58,23 @@ body {
     color: #898989;
 }
 
+.bottom-text2 {
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.063rem;
+    text-align: center;
+    color: #898989;
+    display: none;
+}
+
 main {
     width: 100%;
     min-height: 100vh;
-    background: #FFFFFF;
-    border-radius: 0.75rem 0.75rem 0 0;
-    padding: 2rem 1rem;
+   
 }
 
 .form-container {
-    
+   
     width: 100%;
     max-width: 400px;
     margin: auto;
@@ -75,7 +82,10 @@ main {
     flex-direction: column;
 }
 
-ul {
+.first-ul {
+    background: #FFFFFF;
+    border-radius: 0.75rem 0.75rem 0 0;
+    padding: 2rem 1rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -150,7 +160,7 @@ option {
 
 option:focus {
     background: #E7F0F8;
-    color: #000000;
+    color: #FFFFFF;
 }
 
 .next {
@@ -169,6 +179,26 @@ option:focus {
 
 .next:hover {
     background: #317AD0;
+}
+
+.laptop-specs {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+
+}
+
+.second-ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.second-ul li {
+    padding: 2rem 1rem;
+    background: #FFFFFF;
+    border-radius: 12px;
+    
 }
 
 .upload-img {
@@ -225,7 +255,28 @@ option:focus {
     background-position: right -1rem;
 }
 
+
+.back-button {
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.08em;
+    color: #62A1EB;
+    border: none;
+    background-color: transparent;
+}
+
 .button-saved {
     display: flex;
+    justify-content: space-between;
+}
+
+.bottom-button-container {
+    display: flex;
+    align-items: center;
     justify-content: space-between;
 }
