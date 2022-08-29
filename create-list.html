@@ -15,15 +15,16 @@
   </head>
   <body>
     <header class="header-container">
-      <a href="./index.html"
+      <a class="arrow-img" href="./index.html"
         ><img
-          class="arrow-img"
           src="./asset/Images/back-arrow.png"
           alt="back-arrow"
       /></a>
       <div class="header-text-info">
-        <h2 class="header-text">თანამშრომლის ინფო</h2>
+        <div class="header-main-text">
+        <h2 class="header-text active">თანამშრომლის ინფო</h2>
         <h2 class="header-text-laptop">ლეპტოპის მახასიათებლები</h2>
+      </div>
         <h3 class="bottom-text">1/2</h3>
         <h3 class="bottom-text2"> 2/2</h3>
       </div>
@@ -31,30 +32,32 @@
     <main>
       <form class="form-container" method="post" action="POST">
         <ul class="first-ul">
-          <li class="input-container">
-            <label for="firstname">სახელი</label>
-            <input
-              class="input-class"
-              type="text"
-              name="firstname"
-              placeholder="გრიშა"
-            />
-            <span class="input-bottom-text"
-              >მინიმუმ 2 სიმბოლო, ქართული ასოები</span
-            >
-          </li>
-          <li class="input-container">
-            <label for="lastname">გვარი</label>
-            <input
-              class="input-class"
-              type="text"
-              name="lastname"
-              placeholder="ბაგრატიონი"
-            />
-            <span class="input-bottom-text"
-              >მინიმუმ 2 სიმბოლო, ქართული ასოები</span
-            >
-          </li>
+          <div class="nameSurname">
+            <li class="input-container">
+              <label for="firstname">სახელი</label>
+              <input
+                class="input-class"
+                type="text"
+                name="firstname"
+                placeholder="გრიშა"
+              />
+              <span class="input-bottom-text"
+                >მინიმუმ 2 სიმბოლო, ქართული ასოები</span
+              >
+            </li>
+            <li class="input-container">
+              <label for="lastname">გვარი</label>
+              <input
+                class="input-class"
+                type="text"
+                name="lastname"
+                placeholder="ბაგრატიონი"
+              />
+              <span class="input-bottom-text"
+                >მინიმუმ 2 სიმბოლო, ქართული ასოები</span
+              >
+            </li>
+          </div>
           <li>
             <select name="team" id="team">
               <option selected disabled value="">თიმი</option>
@@ -114,6 +117,7 @@
                 accept="image/*"
               />
               <p class="text-for-img-upload">ლეპტოპის ფოტოს ატვირთვა</p>
+              <p class="upload-img-hidden">ჩააგდე ან ატვირთე ლეპტოპის ფოტო</p>
             </label>
             <div class="input-container">
             <label for="laptopname">ლეპტოპის სახელი</label>

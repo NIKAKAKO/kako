@@ -3,10 +3,14 @@
     src: url(./asset/fonts/HelveticaNeue.ttc) format("ttc");
 }
 
-* {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    transition: all .3s ease-out;
+    font-family: HelveticaNeue, sans-serif;
 }
 
 body {
