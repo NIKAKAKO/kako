@@ -31,7 +31,7 @@
     <main>
       <form class="form-container" method="post" action="POST">
         <ul class="first-ul">
-          <li>
+          <li class="input-container">
             <label for="firstname">სახელი</label>
             <input
               class="input-class"
@@ -43,7 +43,7 @@
               >მინიმუმ 2 სიმბოლო, ქართული ასოები</span
             >
           </li>
-          <li>
+          <li class="input-container">
             <label for="lastname">გვარი</label>
             <input
               class="input-class"
@@ -67,7 +67,7 @@
           </li>
           <li>
             <select name="team" id="team">
-              <option class="disabled" selected disabled value="">თიმი</option>
+              <option class="disabled" selected disabled value="">პოზიცია</option>
               <option value="development">დეველოპმენტი</option>
               <option value="hr">HR</option>
               <option value="sales">გაყიდვები</option>
@@ -75,8 +75,8 @@
               <option value="marketing">მარკეგინგი</option>
             </select>
           </li>
-          <li>
-            <label for="firstname">მეილი</label>
+          <li class="input-container">
+            <label for="email">მეილი</label>
             <input
               class="input-class"
               type="email"
@@ -87,8 +87,8 @@
               >უნდა მთავრდებოდეს @redberry.ge-ით</span
             >
           </li>
-          <li>
-            <label for="firstname">ტელეფონის ნომერი</label>
+          <li class="input-container">
+            <label for="mobile">ტელეფონის ნომერი</label>
             <input
               class="input-class"
               type="tel"
@@ -115,8 +115,8 @@
               />
               <p class="text-for-img-upload">ლეპტოპის ფოტოს ატვირთვა</p>
             </label>
-
-            <label for="firstname">ლეპტოპის სახელი</label>
+            <div class="input-container">
+            <label for="laptopname">ლეპტოპის სახელი</label>
             <input
               class="input-class"
               type="text"
@@ -126,8 +126,9 @@
             <span class="input-bottom-text laptop-names"
               >ლათინური ასოები, ციფრები, !@#$%^&*()_+=</span
             >
-
-            <select name="team" id="team">
+          </div>
+          <div>
+            <select name="team" id="laptopBrand">
               <option class="disabled" selected disabled value="">
                 ლეპტოპის ბრენდი
               </option>
@@ -137,77 +138,89 @@
               <option value="design">დიზაინი</option>
               <option value="marketing">მარკეგინგი</option>
             </select>
+          </div>
           </li>
           <li>
-            <select name="team" id="team">
-              <option class="disabled" selected disabled value="">CPU</option>
-              <option value="development">დეველოპმენტი</option>
-              <option value="hr">HR</option>
-              <option value="sales">გაყიდვები</option>
-              <option value="design">დიზაინი</option>
-              <option value="marketing">მარკეგინგი</option>
-            </select>
-
-            <label for="firstname">CPU-ს ბირთვი</label>
-            <input
-              class="input-class"
-              type="text"
-              name="firstname"
-              placeholder="14"
-            />
-            <span class="input-bottom-text laptop-names">მხოლოდ ციფრები</span>
-
-            <label for="firstname">CPU-ს ნაკადი</label>
-            <input
-              class="input-class"
-              type="text"
-              name="firstname"
-              placeholder="365"
-            />
-            <span class="input-bottom-text laptop-names">მხოლოდ ციფრები</span>
-
-            <label for="firstname">ლეპტოპის RAM (GB)</label>
-            <input
-              class="input-class"
-              type="text"
-              name="firstname"
-              placeholder="16"
-            />
-            <span class="input-bottom-text laptop-names">მხოლოდ ციფრები</span>
-
-            <label for="radio">მეხსიერების ტიპი</label>
+            <div>
+              <select name="cpu" id="cpu">
+                <option class="disabled" selected disabled value="">CPU</option>
+                <option value="development">დეველოპმენტი</option>
+                <option value="hr">HR</option>
+                <option value="sales">გაყიდვები</option>
+                <option value="design">დიზაინი</option>
+                <option value="marketing">მარკეგინგი</option>
+              </select>
+            </div>
+            <div class="input-container">
+              <label for="core">CPU-ს ბირთვი</label>
+              <input
+                class="input-class"
+                type="text"
+                name="core"
+                placeholder="14"
+              />
+              <span class="input-bottom-text laptop-names">მხოლოდ ციფრები</span>
+            </div>
+            <div class="input-container">
+              <label for="cputhread">CPU-ს ნაკადი</label>
+              <input
+                class="input-class"
+                type="text"
+                name="cputhread"
+                placeholder="365"
+              />
+              <span class="input-bottom-text laptop-names">მხოლოდ ციფრები</span>
+            </div>
+            <div class="input-container">
+              <label for="ram">ლეპტოპის RAM (GB)</label>
+              <input
+                class="input-class"
+                type="text"
+                name="ram"
+                placeholder="16"
+              />
+              <span class="input-bottom-text laptop-names">მხოლოდ ციფრები</span>
+            </div>
+            
+            <div class="radio-buttons"> 
+            <label class="radio" for="radio">მეხსიერების ტიპი </label>
             <div class="radio-button-container">
               <input type="radio" id="sdd" name="choose" value="SSD" />
               <label for="sdd">SSD</label>
               <input type="radio" id="hdd" name="choose" value="HDD" />
               <label for="hdd">HDD</label>
             </div>
+          </div>
           </li>
 
           <li class="date-container">
-            <label for="date"> შეძენის რიცხვი (არჩევითი) </label>
-            <input
-              class="input-class"
-              type="date"
-              placeholder="დდ/თთ/წწწწ"
-              lang="ge-CA"
-            />
-
-            <label for="firstname">ლეპტოპის ფასი</label>
-            <input
-              class="input-class price-laptop"
-              type="text"
-              name="firstname"
-              placeholder="0000"
-            />
+            <div>
+              <label id="saledate" for="date"> შეძენის რიცხვი (არჩევითი) </label>
+              <input
+                class="input-class"
+                type="date"
+                placeholder="დდ/თთ/წწწწ"
+                lang="ge-CA"
+              />
+           </div>
+            <div class="input-container">
+              <label id="laptopPrice" for="laptopprice">ლეპტოპის ფასი</label>
+              <input
+                class="input-class price-laptop"
+                type="text"
+                name="laptopprice"
+                placeholder="0000"
+              />
             <span class="input-bottom-text laptop-names">მხოლოდ ციფრები</span>
-
-            <label for="radio">მდგომარეობა</label>
-            <div class="radio-button-container">
-              <input type="radio" id="new" name="choose" value="new" />
-              <label for="new">ახალი</label>
-              <input type="radio" id="used" name="choose" value="used" />
-              <label for="used">მეორადი</label>
+            </div>
+            <div class="radio-buttons">
+              <label class="radio" for="radio">მდგომარეობა</label>
+              <div class="radio-button-container">
+                <input type="radio" id="new" name="choose" value="new" />
+                <label for="new">ახალი</label>
+                <input type="radio" id="used" name="choose" value="used" />
+                <label for="used">მეორადი</label>
+              </div>
             </div>
             <div class="bottom-button-container">
               <button class="back-button">უკან</button>

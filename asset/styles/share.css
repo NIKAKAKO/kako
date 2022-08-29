@@ -21,6 +21,9 @@ body {
     display: flex;
     justify-content: center;
     position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
 }
 
 .header-text-info {
@@ -78,7 +81,7 @@ main {
     width: 100%;
     max-width: 400px;
     margin: auto;
-    display: none;
+    display: flex;
     flex-direction: column;
 }
 
@@ -113,6 +116,11 @@ li {
     line-height: 1.313rem;
     display: flex;
     align-items: center;
+    color: rgba(0, 0, 0, 1);
+    outline: none;
+}
+
+input::placeholder {
     color: rgba(0, 0, 0, 0.6);
 }
 
@@ -123,6 +131,19 @@ li {
     display: flex;
     align-items: center;
     color: #2E2E2E;
+}
+
+.input-container {
+    margin: 1rem 0;
+}
+
+.input-container.error > label,
+.input-container.error > span {
+    color: #E52F2F;
+}
+
+.input-container.error > input {
+    border-color: #E52F2F;
 }
 
 select {
@@ -205,15 +226,23 @@ option:focus {
     display: flex;
     background-image: url(../Images/upload-laptop-img.png);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top 60px center;
     width: 100%;
     height: 244px;
     background-color: #F7F7F7;
     border: 2px dashed #4386A9;
     border-radius: 8px;
     flex-direction: column;
-    gap: 3rem;
+    gap: 7rem;
     margin-bottom: 2rem;
+    align-items: center;
+}
+
+.upload-img.error {
+        border-color: #E52F2F;
+        background-color: #FFEDED;
+        background-image: url(../Images/upload-laptop-img.png), url(../Images/error-warning.png);
+        background-position: top 60px center, bottom 25px center;
 }
 
 .hidden-input {
@@ -221,6 +250,7 @@ option:focus {
 }
 
 .text-for-img-upload {
+    width: 50%;
     font-weight: 400;
     font-size: 16px;
     line-height: 26px;
@@ -235,12 +265,23 @@ option:focus {
     margin-bottom: 2rem;
 }
 
+.radio-buttons.error > label {
+    color: #E52F2F;
+    position: relative;
+    max-width: fit-content;
+}
+
+.radio-buttons.error > label::after {
+    position: absolute;
+    content: url(../Images/error-warning.png);
+    right: -2rem;
+}
+
 .radio-button-container {
     margin-top: 1rem;
     display: flex;
     justify-content: space-between;
     width: 50%;
-
 }
 
 .date-container {
@@ -250,9 +291,9 @@ option:focus {
 }
 
 .price-laptop {
-    background-image: url("../Images/GEL.png");
+    background-image: url(../Images/GEL.png);
     background-repeat: no-repeat;
-    background-position: right -1rem;
+    background-position: right 1rem center;
 }
 
 
