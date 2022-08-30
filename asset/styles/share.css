@@ -49,6 +49,13 @@ body {
     line-height: 1.25rem;
     text-align: center;
     color: #232323;
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
 }
 
 .header-text-laptop {
@@ -126,6 +133,10 @@ li {
     outline: none;
 }
 
+.input-class:focus {
+    background: rgba(43, 75, 242, 0.06);
+}
+
 input::placeholder {
     color: rgba(0, 0, 0, 0.6);
 }
@@ -176,6 +187,11 @@ select {
     background-position-y: 50%;
 }
 
+select.error {
+    border: 1.8px solid #E52F2F;
+
+}
+
 option {
     font-weight: 400;
     color: #000000;
@@ -188,7 +204,8 @@ option:focus {
 }
 
 .next {
-    width: 132px;
+    display: flex;
+    width: 145px;
     height: 46px;
     background: #62A1EB;
     border-radius: 8px;
@@ -198,7 +215,9 @@ option:focus {
     font-size: 18px;
     line-height: 22px;
     color: #FFFFFF;
-    transition: 0.3 ease-in;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
 }
 
 .next:hover {
@@ -323,6 +342,7 @@ option:focus {
     color: #62A1EB;
     border: none;
     background-color: transparent;
+    text-decoration: none;
 }
 
 .button-saved {
@@ -391,6 +411,7 @@ option:focus {
         line-height: 1.25rem;
         text-align: center;
         color: #232323;
+        
     }
 
     .bottom-text {
@@ -399,6 +420,10 @@ option:focus {
 
     .header-text.active {
         position: relative;
+    }
+
+    .hidden {
+        display: block;
     }
 
     .header-text.active::after {
@@ -452,7 +477,16 @@ option:focus {
         background-image: none;
         max-width: 870px;
         height: 423px;
-        gap: 4rem;
+        gap: 6rem;
+    }
+
+    .upload-img.error {
+        border-color: #E52F2F;
+        background-color: #FFEDED;
+        background-image: url(../Images/error-warning.png);
+        background-repeat: no-repeat;
+        background-position: center top 54px;
+        background-size: 38px 34px;
     }
 
     .upload-class {
@@ -524,7 +558,6 @@ option:focus {
     .cpu-core, .cpu-theard {
         margin: 1rem 0;
         flex-basis: 35%;
-
     }
 
     
