@@ -1,6 +1,6 @@
 const catchTeam = document.getElementById('team');
 
-console.log(position);
+
 
 fetch('https://pcfy.redberryinternship.ge/api/teams')
     .then(response => response.json()).then(answer => {

@@ -137,6 +137,12 @@ li {
     background: rgba(43, 75, 242, 0.06);
 }
 
+.input-class.success {
+    background-image: url(../Images/success.png);
+    background-repeat: no-repeat;
+    background-position: right 1rem top 50%;
+}
+
 input::placeholder {
     color: rgba(0, 0, 0, 0.6);
 }
@@ -356,12 +362,25 @@ option:focus {
     justify-content: space-between;
 }
 
+.desktop-logo {
+
+    display: none;
+}
+
 @media screen and (min-width: 1024px) {
 
     body {
         height: 100vh;
         padding: 6rem 0 0 0;
         background: #E5E5E5;
+    }
+
+    main {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     
     .form-container {
@@ -558,6 +577,11 @@ option:focus {
     .cpu-core, .cpu-theard {
         margin: 1rem 0;
         flex-basis: 35%;
+    }
+
+    .desktop-logo {
+        display: block;
+        margin: 4.188rem;
     }
 
     
