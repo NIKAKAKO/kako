@@ -31,7 +31,7 @@
 
     <main>
 
-      <form class="laptop-specs" action="" method="post">
+      <form class="laptop-specs">
         <ul class="second-ul">
           <li>
             <label class="upload-img" for="img">
@@ -91,7 +91,7 @@
               />
               <span class="input-bottom-text laptop-names">მხოლოდ ციფრები</span>
             </div>
-            <div class="input-container cpu-theards">
+            <div class="input-container cpu-theard">
               <label for="cputhread">CPU-ს ნაკადი</label>
               <input
                 class="input-class"
@@ -134,25 +134,29 @@
                 lang="ge-CA"
               />
            </div>
-            <div class="input-container">
-              <label id="laptopPrice" for="laptopprice">ლეპტოპის ფასი</label>
-              <input
-                class="input-class price-laptop"
-                type="text"
-                name="laptopprice"
-                placeholder="0000"
-              />
-            <span class="input-bottom-text laptop-names">მხოლოდ ციფრები</span>
-            </div>
-            <div class="radio-buttons">
-              <label class="radio" for="radio">მდგომარეობა</label>
-              <div class="radio-button-container">
-                <input type="radio" id="new" name="choose" value="new" />
-                <label for="new">ახალი</label>
-                <input type="radio" id="used" name="choose" value="used" />
-                <label for="used">მეორადი</label>
+           
+            <div class="radio-box">
+              <div class="input-container">
+                <label id="laptopPrice" for="laptopprice">ლეპტოპის ფასი</label>
+                <input
+                  class="input-class price-laptop"
+                  type="text"
+                  name="laptopprice"
+                  placeholder="0000"
+                />
+              <span class="input-bottom-text laptop-names">მხოლოდ ციფრები</span>
+              </div>
+              <div class="radio-buttons">
+                <label class="radio" for="radio">მდგომარეობა</label>
+                <div class="radio-button-container">
+                  <input type="radio" id="new" name="choose" value="new" />
+                  <label for="new">ახალი</label>
+                  <input type="radio" id="used" name="choose" value="used" />
+                  <label for="used">მეორადი</label>
+                </div>
               </div>
             </div>
+          
             <div class="bottom-button-container">
               <a href="./create-list.html" class="back-button">უკან</a>
             <div class="button-saved">
@@ -163,7 +167,7 @@
           </li>
         </ul>
       </form>
-      <img src="./asset/Images/logo-desktop.png" alt="desktop-logo">
+      <img class="desktop-logo" src="./asset/Images/logo-desktop.png" alt="desktop-logo">
     </main>
     <script src=""></script>
   </body>

@@ -137,7 +137,7 @@ li {
     background: rgba(43, 75, 242, 0.06);
 }
 
-.input-class.success {
+.input-container.success > input {
     background-image: url(../Images/success.png);
     background-repeat: no-repeat;
     background-position: right 1rem top 50%;
@@ -547,7 +547,7 @@ option:focus {
     }
 
     .select-div {
-        width: 45%;
+        width: 48%;
         margin-bottom: 2rem;
         height: 62px;
     }
@@ -558,7 +558,7 @@ option:focus {
 
     .input-halp {
         margin: 1rem 0;
-        width: 45%;
+        width: 48%;
     }
     
     .cpu-core-theard {
@@ -574,7 +574,12 @@ option:focus {
         flex-basis: 35%;
     }
 
-    .cpu-core, .cpu-theard {
+    .cpu-core {
+        margin: 1rem 0;
+        flex-basis: 35%;
+    }
+
+    .cpu-theard {
         margin: 1rem 0;
         flex-basis: 35%;
     }

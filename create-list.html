@@ -29,16 +29,16 @@
       </div>
     </header>
     <main>
-      <form class="form-container" method="post" action="POST">
+      <form class="form-container">
         <ul class="first-ul">
           <div class="nameSurname">
             <li class="input-container">
-              <label for="firstname">სახელი</label>
+              <label for="name">სახელი</label>
               <input
                 class="input-class"
                 type="text"
-                name="firstname"
-                id="first-name"
+                name="name"
+                id="name"
                 placeholder="გრიშა"
               />
               <span class="input-bottom-text"
@@ -46,11 +46,12 @@
               >
             </li>
             <li class="input-container">
-              <label for="lastname">გვარი</label>
+              <label for="surname">გვარი</label>
               <input
                 class="input-class"
                 type="text"
-                name="lastname"
+                name="surname"
+                id="surname"
                 placeholder="ბაგრატიონი"
               />
               <span class="input-bottom-text"
@@ -59,14 +60,14 @@
             </li>
           </div>
           <li>
-            <select name="team" id="team">
+            <select name="team" id="team_id">
               <option selected disabled value="">თიმი</option>
               
             </select>
           </li>
           <li>
-            <select name="position" id="position" disabled>
-              <option class="disabled" selected disabled value="">პოზიცია</option>
+            <select name="position" id="position_id" disabled>
+              <option  class="disabled" selected disabled value="position">პოზიცია</option>
               
             </select>
           </li>
@@ -75,6 +76,7 @@
             <input
               class="input-class"
               type="email"
+              id="email"
               name="email"
               placeholder="grish666@redberry.ge"
             />
@@ -83,21 +85,22 @@
             >
           </li>
           <li class="input-container">
-            <label for="mobile">ტელეფონის ნომერი</label>
+            <label for="phone_number">ტელეფონის ნომერი</label>
             <input
               class="input-class"
               type="tel"
-              name="mobile"
+              id="phone_number"
+              name="phone_number"
               placeholder="+995 598 00 07 01"
             />
             <span class="input-bottom-text">ქართული მობ-ნომრის ფორმატი</span>
           </li>
-          <a href="./laptop-specs.html" id="nextButton" class="next">შემდეგი</a>
+          <button id="nextButton" class="next">შემდეგი</button>
         </ul>
       </form>
       <img class="desktop-logo" src="./asset/Images/logo-desktop.png" alt="desktop-logo">
     </main>
     <script src="./script/main.js"></script>
-    <script src="./script/reg-ex.js"></script>
+    <script src="./script/create-list.js"></script>
   </body>
 </html>
