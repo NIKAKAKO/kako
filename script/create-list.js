@@ -76,7 +76,7 @@ document.querySelectorAll('select').forEach(select => select.addEventListener('i
 nextFormElement.addEventListener('click', (event) => {
     event.preventDefault();
     testForm()
-    if(document.querySelectorAll('.error').length === 0 && Object.keys(localData).length === 6){
+    if(document.querySelectorAll('.error').length === 0 && Object.keys(localData).length > 5){
         window.location.href = '../laptop-specs.html';
     }
 })

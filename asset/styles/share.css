@@ -275,6 +275,21 @@ option:focus {
         background-position: top 60px center, bottom 25px center;
 }
 
+.upload-img.succeed {
+    border: none;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.upload-img.succeed > p {
+    display: none;
+}
+
+.upload-img.dragover {
+    border: 2px solid #0cc574;
+}
+
 .upload-class {
     display: none;
 
@@ -314,6 +329,12 @@ option:focus {
     position: absolute;
     content: url(../Images/error-warning.png);
     right: -2rem;
+}
+
+.radio-buttons.success {
+    background-image: url(../Images/success.png);
+    background-repeat: no-repeat;
+    background-position: right 12rem top 0%;
 }
 
 .radio-button-container {

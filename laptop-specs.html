@@ -34,12 +34,12 @@
       <form class="laptop-specs">
         <ul class="second-ul">
           <li>
-            <label class="upload-img" for="img">
+            <label class="upload-img" for="laptop_image">
               <input
                 class="hidden-input"
                 type="file"
-                id="img"
-                name="img"
+                id="laptop_image"
+                name="laptop_image"
                 accept="image/*"
               />
               <p class="text-for-img-upload">ლეპტოპის ფოტოს ატვირთვა</p>
@@ -52,7 +52,8 @@
             <input
               class="input-class"
               type="text"
-              name="firstname"
+              name="laptopname"
+              id="laptop_name"
               placeholder="HP"
             />
             <span class="input-bottom-text laptop-names"
@@ -60,15 +61,11 @@
             >
           </div>
           <div class="select-div">
-            <select name="team" id="laptopBrand">
+            <select name="laptop_brand" id="laptop_brand_id">
               <option class="disabled" selected disabled value="">
                 ლეპტოპის ბრენდი
               </option>
-              <option value="development">დეველოპმენტი</option>
-              <option value="hr">HR</option>
-              <option value="sales">გაყიდვები</option>
-              <option value="design">დიზაინი</option>
-              <option value="marketing">მარკეგინგი</option>
+              
             </select>
           </div>
         </div>
@@ -76,27 +73,30 @@
           <li>
             <div class="cpu-core-theard">
             <div class="cpu">
-              <select name="cpu" id="cpu">
+              <select name="cpu" id="laptop_cpu">
                 <option class="disabled" selected disabled value="">CPU</option>
                
               </select>
             </div>
             <div class="input-container cpu-core">
-              <label for="core">CPU-ს ბირთვი</label>
+              <label for="laptop_cpu_cores">CPU-ს ბირთვი</label>
               <input
                 class="input-class"
-                type="text"
-                name="core"
+                type="number"
+                name="laptop_cpu_cores"
+                id="laptop_cpu_cores"
                 placeholder="14"
+
               />
               <span class="input-bottom-text laptop-names">მხოლოდ ციფრები</span>
             </div>
             <div class="input-container cpu-theard">
-              <label for="cputhread">CPU-ს ნაკადი</label>
+              <label for="laptop_cpu_threads">CPU-ს ნაკადი</label>
               <input
                 class="input-class"
-                type="text"
-                name="cputhread"
+                type="number"
+                name="laptop_cpu_threads"
+                id="laptop_cpu_threads"
                 placeholder="365"
               />
               <span class="input-bottom-text laptop-names">მხოლოდ ციფრები</span>
@@ -105,22 +105,23 @@
 
           <div class="radio-box">
             <div class="input-container">
-              <label for="ram">ლეპტოპის RAM (GB)</label>
+              <label for="laptop_ram">ლეპტოპის RAM (GB)</label>
               <input
                 class="input-class"
-                type="text"
-                name="ram"
+                type="number"
+                name="laptop_ram"
+                id="laptop_ram"
                 placeholder="16"
               />
               <span class="input-bottom-text laptop-names">მხოლოდ ციფრები</span>
             </div>
             
             <div class="radio-buttons"> 
-            <label class="radio" for="radio">მეხსიერების ტიპი </label>
-            <div class="radio-button-container">
-              <input type="radio" id="sdd" name="choose" value="SSD" />
+            <label class="radio" for="sdd">მეხსიერების ტიპი </label>
+            <div id="laptop_hard_drive_type" class="radio-button-container">
+              <input type="radio" id="sdd" name="laptop_hard_drive_type" value="SSD" />
               <label for="sdd">SSD</label>
-              <input type="radio" id="hdd" name="choose" value="HDD" />
+              <input type="radio" id="hdd" name="laptop_hard_drive_type" value="HDD" />
               <label for="hdd">HDD</label>
             </div>
           </div>
@@ -130,10 +131,11 @@
           <li class="date-container">
             <div class="bottom-radio-box">
             <div class="sale-date-cont">
-              <label id="saledate" for="date"> შეძენის რიცხვი (არჩევითი) </label>
+              <label  for="laptop_purchase_date"> შეძენის რიცხვი (არჩევითი) </label>
               <input
                 class="input-class"
-                type="date"
+                type="text"
+                id="laptop_purchase_date"
                 placeholder="დდ/თთ/წწწწ"
                 lang="ge-CA"
               />
@@ -141,22 +143,22 @@
            
             
               <div class="input-container">
-                <label id="laptopPrice" for="laptopprice">ლეპტოპის ფასი</label>
+                <label id="laptopPrice" for="laptop_price">ლეპტოპის ფასი</label>
                 <input
                   class="input-class price-laptop"
-                  type="text"
-                  name="laptopprice"
+                  type="number"
+                  id="laptop_price"
                   placeholder="0000"
                 />
               <span class="input-bottom-text laptop-names">მხოლოდ ციფრები</span>
               </div>
             </div>
               <div class="radio-buttons">
-                <label class="radio" for="radio">მდგომარეობა</label>
-                <div class="radio-button-container">
-                  <input type="radio" id="new" name="choose" value="new" />
+                <label class="radio" for="new">მდგომარეობა</label>
+                <div id="laptop_state" class="radio-button-container">
+                  <input type="radio" id="new" name="laptop-state" value="new" />
                   <label for="new">ახალი</label>
-                  <input type="radio" id="used" name="choose" value="used" />
+                  <input type="radio" id="used" name="laptop-state" value="used" />
                   <label for="used">მეორადი</label>
                 </div>
               </div>
@@ -174,6 +176,6 @@
       </form>
       <img class="desktop-logo" src="./asset/Images/logo-desktop.png" alt="desktop-logo">
     </main>
-    <script src=""></script>
+    <script src="./script/laptop-specs.js"></script>
   </body>
 </html>
