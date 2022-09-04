@@ -309,7 +309,7 @@ sendButton.addEventListener('click', (event) => {
         if(localData.laptop_purchase_date) {
             formData.append('laptop_purchase_date', localData.laptop_purchase_date);
         }
-        formData.append('token', '8f4d2104aed624c5906cdc195d6b815c');
+        formData.append('token', '4fce699b646a3b3e7bdc4c9b7dcd4658');
         fetch('https://pcfy.redberryinternship.ge/api/laptop/create', {
             method: 'POST',
             body: formData
