@@ -162,6 +162,7 @@ document.querySelectorAll('input[type="radio"]').forEach(radio => radio.addEvent
 laptopImg.addEventListener('change', (event) => {
     laptopImg.parentElement.classList.remove('error');
     formData.set('laptop_image', event.target.files[0]);
+    console.log(event.target.files[0]);
     laptopImg.parentElement.style.backgroundImage = `url(${URL.createObjectURL(event.target.files[0])})`;
     laptopImg.parentElement.classList.add('success');
     laptopImg.parentElement.querySelectorAll('p').forEach(p => p.style.display = 'none');
@@ -281,9 +282,41 @@ const testForm = () => {
 
 }
 
-sendButton.addEventListener('click', (event)=> {
+
+
+sendButton.addEventListener('click', (event) => {
     event.preventDefault();
     testForm();
+
     submitted = true;
+    const errorClasses = document.querySelectorAll('.error');
+    if(errorClasses.length === 0 && Object.keys(localData).length > 14) {
+        formData.append('name', localData.name);
+        formData.append('surname', localData.surname);
+        formData.append('email', localData.email);
+        formData.append('phone_number', localData.phone_number);
+        formData.append('team_id', +localData.team_id);
+        formData.append('position_id', +localData.position_id);
+        formData.append('laptop_name', localData.laptop_name);
+        formData.append('laptop_brand_id', +localData.laptop_brand_id);
+        formData.append('laptop_cpu', localData.laptop_cpu);
+        formData.append('laptop_cpu_cores', +localData.laptop_cpu_cores);
+        formData.append('laptop_cpu_threads', +localData.laptop_cpu_threads);
+        formData.append('laptop_ram', +localData.laptop_ram);
+        formData.append('laptop_price', +localData.laptop_price);
+        formData.append('laptop_hard_drive_type', localData.laptop_hard_drive_type);
+        formData.append('laptop_state', localData.laptop_state);
+        if(localData.laptop_purchase_date) {
+            formData.append('laptop_purchase_date', localData.laptop_purchase_date);
+        }
+        formData.append('token', '8f4d2104aed624c5906cdc195d6b815c');
+        fetch('https://pcfy.redberryinternship.ge/api/laptop/create', {
+            method: 'POST',
+            body: formData
+        })
+        console.log(localData.phone_number, )
+        // localStorage.removeItem('data');
+        // window.location.href = '../popup/success.html';
+    }
 
 })
