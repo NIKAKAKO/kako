@@ -315,8 +315,12 @@ sendButton.addEventListener('click', (event) => {
             body: formData
         })
         console.log(localData.phone_number, )
-        localStorage.removeItem('data');
-        window.location.href = '../src/success.html';
+        sendButton.disabled = true;
+        setTimeout(()=> {
+            localStorage.removeItem('data');
+            window.location.href = '../src/success.html';
+        }, 2000)
+        
     }
 
 })
