@@ -163,7 +163,7 @@ laptopImg.addEventListener('change', (event) => {
     formData.set('laptop_image', event.target.files[0]);
     laptopImg.parentElement.style.backgroundImage = `url(${URL.createObjectURL(event.target.files[0])})`;
     laptopImg.parentElement.classList.add('success');
-    laptopImg.parentElement.querySelectorAll('span').forEach(span => span.style.display = 'none');
+    laptopImg.parentElement.querySelectorAll('p').forEach(p => p.style.display = 'none');
 })
 
 laptopImg.parentElement.addEventListener('dragover', (event) => {

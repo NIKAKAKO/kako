@@ -84,7 +84,7 @@ nextFormElement.addEventListener('click', (event) => {
 document.querySelector('.header-text.hidden').addEventListener('click', (event) => {
     event.preventDefault();
     testForm()
-    if(document.querySelectorAll('.error').length === 0 && Object.keys(localData).length === 6){
+    if(document.querySelectorAll('.error').length === 0 && Object.keys(localData).length > 5){
         window.location.href = '../laptop-specs.html';
     }
 })
