@@ -315,8 +315,8 @@ sendButton.addEventListener('click', (event) => {
             body: formData
         })
         console.log(localData.phone_number, )
-        // localStorage.removeItem('data');
-        // window.location.href = '../popup/success.html';
+        localStorage.removeItem('data');
+        window.location.href = '../src/success.html';
     }
 
 })
