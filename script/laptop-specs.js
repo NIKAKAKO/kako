@@ -8,7 +8,7 @@ const laptopThread = document.getElementById('laptop_cpu_threads');
 const saleDate = document.getElementById('laptop_purchase_date');
 const localData = JSON.parse(localStorage.getItem('data'));
 const laptopRam = document.getElementById('laptop_ram');
-const hardDrive = document.getElementById('laptop_hard_drive_type');
+const hardDrive = document.querySelector('.laptop_hard_drive_type');
 const laptopPrice = document.getElementById('laptop_price');
 
 
@@ -153,7 +153,8 @@ document.querySelectorAll('input[type="radio"]').forEach(radio => radio.addEvent
         testForm();
     }
     const name = radio.parentElement.id;
-    localData[name] = radio.value;
+    console.log(radio.value);
+    // localData[name] = radio.value;
     localStorage.setItem('data', JSON.stringify(localData));
 }))
 
@@ -208,7 +209,7 @@ laptopImg.parentElement.addEventListener('dragover', (event) => {
 }
 
 const testSelect = ( input, object, name ) => {
-    if(input.value != 'laptop-brand' && input.value != 'cpu') {
+    if(input.value != 'laptop_brand' && input.value != 'cpu') {
         if(name) {
             object[input.id] = input.options[input.selectedIndex].text;
         }else {
@@ -236,11 +237,15 @@ const testNumber = (input, object) => {
 
 
 const testRadio = (parentElementName, object) => {
-    const elements = document.querySelectorAll(`#${parentElementName} input`);
+    console.log(document.querySelectorAll(`.${parentElementName} input`));
+    const elements = document.querySelectorAll(`.${parentElementName} input`);
     elements.forEach(input => {
+
         if(input.checked) {
-            const name = input.parentElement.id;
+            const name = input.parentElement.classList[1];
+            console.log(object);
             object[name] = input.value;
+
         }
         if(!elements[0].checked && !elements[1].checked){
             elements[0].parentElement.closest('.radio-buttons').classList.add('error');

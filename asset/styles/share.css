@@ -275,7 +275,7 @@ option:focus {
         background-position: top 60px center, bottom 25px center;
 }
 
-.upload-img.succeed {
+.upload-img.success {
     border: none;
     background-position: center;
     background-size: contain;
