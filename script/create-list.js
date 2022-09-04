@@ -77,7 +77,7 @@ nextFormElement.addEventListener('click', (event) => {
     event.preventDefault();
     testForm()
     if(document.querySelectorAll('.error').length === 0 && Object.keys(localData).length > 5){
-        window.location.href = './laptop-specs.html';
+        window.location.href = '../src/laptop-specs.html';
     }
 })
 
@@ -85,7 +85,7 @@ document.querySelector('.header-text.hidden').addEventListener('click', (event) 
     event.preventDefault();
     testForm()
     if(document.querySelectorAll('.error').length === 0 && Object.keys(localData).length > 5){
-        window.location.href = './laptop-specs.html';
+        window.location.href = '../src/laptop-specs.html';
     }
 })
 
