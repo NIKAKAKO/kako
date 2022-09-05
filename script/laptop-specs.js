@@ -11,7 +11,6 @@ const laptopRam = document.getElementById('laptop_ram');
 const hardDrive = document.querySelector('.laptop_hard_drive_type');
 const laptopPrice = document.getElementById('laptop_price');
 
-
 const formData = new FormData();
 let droppedImage = false;
 let submitted = false;
@@ -153,8 +152,6 @@ document.querySelectorAll('input[type="radio"]').forEach(radio => radio.addEvent
         testForm();
     }
     const name = radio.parentElement.id;
-    console.log(radio.value);
-    // localData[name] = radio.value;
     localStorage.setItem('data', JSON.stringify(localData));
 }))
 
@@ -162,7 +159,6 @@ document.querySelectorAll('input[type="radio"]').forEach(radio => radio.addEvent
 laptopImg.addEventListener('change', (event) => {
     laptopImg.parentElement.classList.remove('error');
     formData.set('laptop_image', event.target.files[0]);
-    console.log(event.target.files[0]);
     laptopImg.parentElement.style.backgroundImage = `url(${URL.createObjectURL(event.target.files[0])})`;
     laptopImg.parentElement.classList.add('success');
     laptopImg.parentElement.querySelectorAll('p').forEach(p => p.style.display = 'none');
@@ -202,7 +198,6 @@ laptopImg.parentElement.addEventListener('dragover', (event) => {
         object[input.id] = input.value;
         input.parentElement.classList.remove('error');
         input.parentElement.classList.add('success');
-        console.log(input.parentElement);
     }else {
         input.parentElement.classList.add('error');
         input.parentElement.classList.remove('success');
@@ -238,13 +233,11 @@ const testNumber = (input, object) => {
 
 
 const testRadio = (parentElementName, object) => {
-    console.log(document.querySelectorAll(`.${parentElementName} input`));
     const elements = document.querySelectorAll(`.${parentElementName} input`);
     elements.forEach(input => {
 
         if(input.checked) {
             const name = input.parentElement.classList[1];
-            console.log(object);
             object[name] = input.value;
 
         }
@@ -294,7 +287,13 @@ sendButton.addEventListener('click', (event) => {
         formData.append('name', localData.name);
         formData.append('surname', localData.surname);
         formData.append('email', localData.email);
-        formData.append('phone_number', localData.phone_number);
+        let phoneNum;
+        if(localData.phone_number.startsWith('+995')){
+            phoneNum = localData.phone_number
+        } else {
+            phoneNum = "+995" + localData.phone_number;
+        }
+        formData.append('phone_number', phoneNum);
         formData.append('team_id', +localData.team_id);
         formData.append('position_id', +localData.position_id);
         formData.append('laptop_name', localData.laptop_name);
@@ -310,11 +309,11 @@ sendButton.addEventListener('click', (event) => {
             formData.append('laptop_purchase_date', localData.laptop_purchase_date);
         }
         formData.append('token', '4fce699b646a3b3e7bdc4c9b7dcd4658');
+
         fetch('https://pcfy.redberryinternship.ge/api/laptop/create', {
             method: 'POST',
             body: formData
         })
-        console.log(localData.phone_number, )
         sendButton.disabled = true;
         setTimeout(()=> {
             localStorage.removeItem('data');

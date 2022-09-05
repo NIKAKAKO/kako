@@ -8,7 +8,6 @@ fetch('https://pcfy.redberryinternship.ge/api/laptops?token=4fce699b646a3b3e7bdc
        const mainContainer = document.querySelector('main');
        mainContainer.innerHTML+= laptopInfo;
     })
-    console.log(laptops);
 })
 
 
@@ -38,6 +37,5 @@ return laptopTemplate;
 window.getId = (element)=> {
   const getElement = element.parentElement.closest(".card-container");
   localStorage.setItem('id', getElement.id);
-  console.log(getElement.id);
     
 }

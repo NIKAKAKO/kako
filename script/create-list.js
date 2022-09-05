@@ -41,7 +41,6 @@ fetch('https://pcfy.redberryinternship.ge/api/teams')
             option.innerText = teams[i].name;
             team.appendChild(option);
         }   
-        console.log(team.querySelectorAll('option'));
         if(localData.team_id){
             const teamId = Number(localData.team_id);
             team.querySelectorAll('option')[teamId].selected = true;
@@ -139,7 +138,6 @@ const testPhone = ( input, object ) => {
         }else {
             object[input.id] = '+995' + phone;
         }
-        console.log(object[input.id]);
         input.parentElement.classList.remove('error');
         input.parentElement.classList.add('success');
     }else{
