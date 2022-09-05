@@ -318,6 +318,7 @@ sendButton.addEventListener('click', (event) => {
         sendButton.disabled = true;
         setTimeout(()=> {
             localStorage.removeItem('data');
+            
             window.location.href = '../src/success.html';
         }, 2000)
         
