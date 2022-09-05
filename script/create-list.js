@@ -113,7 +113,7 @@ const testSelect = ( input, object ) => {
 }
 
 const testMail = ( input, object ) => {
-    const mailRegex = /^[a-zA-Z0-9.$%&_{|}~-]+@(redberry.ge)$/; 
+    const mailRegex = /^[a-zA-Z0-9.$%&_{|}~-]+@(redberry\.ge)$/; 
     if(mailRegex.test(input.value)) {
         object[input.id] = input.value;
         input.parentElement.classList.remove('error');
